@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Feedback - My College</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+/* Global Aesthetics */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #f4f7f6; 
+            color: #2c3e50;
+            overflow-x: hidden;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            color: #1a2b4c;
+        }
+
+        
+        /* Navigation Enhancements */
+        .navbar { 
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            padding: 12px 0;
+            width: 100%;
+        }
+        .navbar .container-fluid {
+            max-width: 1600px;
+        }
+        .navbar-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .nav-item {
+            margin: 2px 8px;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .navbar-brand, .nav-link { 
+            color: rgba(255,255,255,0.95) !important; 
+            font-size: 1.05em;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.2s ease;
+            white-space: nowrap;
+        }
+        .nav-link:hover {
+            color: #f39c12 !important;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero { 
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            padding: 80px 0; 
+            text-align: center; 
+            border-bottom: 1px solid #dce4f0;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #596a7b;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Cards and Sections */
+        .content { padding: 60px 0; }
+        .form-section, .info-box, .contact-info, .feature-card, .card { 
+            background-color: white; 
+            border-radius: 12px; 
+            padding: 30px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+        .form-section:hover, .info-box:hover, .contact-info:hover, .feature-card:hover, .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .info-box { 
+            background-color: #f0f8ff; 
+            border-left: 5px solid #3498db; 
+            margin-bottom: 30px; 
+        }
+
+        /* Buttons & Forms */
+        .btn-primary {
+            background-color: #3498db;
+            border-color: #3498db;
+            padding: 10px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+        .form-control, .form-select {
+            border-radius: 8px;
+            border: 1px solid #dcdde1;
+            padding: 12px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+        }
+
+        /* Footer */
+        footer { 
+            background: linear-gradient(135deg, #1e293b, #0f172a); 
+            color: #94a3b8; 
+            padding: 30px 0; 
+            text-align: center; 
+            margin-top: 40px;
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar (same as previous pages, active on Students Feedback) -->
+        <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-lg-none" href="home.html">Phoenix College</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="history.html">History</a></li>
+                            <li><a class="dropdown-item" href="vision-mission.html">Vision and Mission</a></li>
+                            <li><a class="dropdown-item" href="management.html">Management</a></li>
+                            <li><a class="dropdown-item" href="administration.html">Administration</a></li>
+                            <li><a class="dropdown-item" href="infrastructure.html">Infrastructure</a></li>
+                            <li><a class="dropdown-item" href="achievements.html">Achievements</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="academicsDropdown" role="button" data-bs-toggle="dropdown">Academics</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="junior-college.html">Junior College</a></li>
+                            <li><a class="dropdown-item" href="diploma.html">Diploma Programs</a></li>
+                            <li><a class="dropdown-item" href="degree.html">Degree Programs</a></li>
+                            <li><a class="dropdown-item" href="phd.html">PhD</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="admissionsDropdown" role="button" data-bs-toggle="dropdown">Admissions</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="prospectus.html">Prospectus</a></li>
+                            <li><a class="dropdown-item" href="notice-board.html">Notice Board</a></li>
+                            <li><a class="dropdown-item" href="important-links.html">Important Links</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="examDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Examinations</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Junior College</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="exam-science.html">Science</a></li>
+                                    <li><a class="dropdown-item" href="exam-commerce.html">Commerce</a></li>
+                                    <li><a class="dropdown-item" href="exam-arts.html">Arts</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="exam-diploma.html">Diploma Exams</a></li>
+                            <li><a class="dropdown-item" href="exam-degree.html">Degree Exams</a></li>
+                            <li><a class="dropdown-item" href="exam-phd.html">PhD Exams</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="campusDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Campus Life</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="library.html">Library</a></li>
+                            <li><a class="dropdown-item" href="scholarships.html">Scholarships</a></li>
+                            <li><a class="dropdown-item" href="rules-regulations.html">Rules & Regulations</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Co-Curricular</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="nss.html">NSS</a></li>
+                                    <li><a class="dropdown-item" href="ncc.html">NCC</a></li>
+                                    <li><a class="dropdown-item" href="women-development.html">Women Development</a></li>
+                                    <li><a class="dropdown-item" href="self-defense.html">Self Defense</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contact & Help</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                            <li><a class="dropdown-item" href="students-feedback.html">Student Feedback</a></li>
+                            <li><a class="dropdown-item" href="complaint-form.html">Complaint Form</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<h2>Main Theory Exam Dates (Key Arts Subjects)</h2>
+<table class="table table-bordered">
+    <thead><tr><th>Date</th><th>Subject</th><th>Time</th></tr></thead>
+    <tbody>
+        <tr><td>Feb 10, 2026</td><td>English</td><td>11:00 AM - 2:00 PM</td></tr>
+        <tr><td>Feb 18, 2026</td><td>Political Science</td><td>11:00 AM - 2:00 PM</td></tr>
+        <tr><td>Feb 20, 2026</td><td>History (example)</td><td>11:00 AM - 2:00 PM</td></tr>
+        <tr><td>Mar 4, 2026</td><td>Psychology</td><td>11:00 AM - 2:00 PM</td></tr>
+        <tr><td>Mar 7, 2026</td><td>Geography</td><td>11:00 AM - 2:00 PM</td></tr>
+        <tr><td>Mar 9, 2026</td><td>History</td><td>11:00 AM - 2:00 PM</td></tr>
+        <tr><td>Mar 11, 2026</td><td>Sociology</td><td>11:00 AM - 2:00 PM</td></tr>
+    </tbody>
+</table>
+
+<!-- footer -->

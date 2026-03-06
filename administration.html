@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - My College</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f8f9fa; }
+        .navbar { background-color: #007bff; }
+        .navbar-brand, .nav-link { color: white !important; }
+        .hero { background-color: #e9ecef; padding: 50px 0; text-align: center; }
+        .content { padding: 40px 0; }
+        .admin-card { margin-bottom: 30px; background-color: white; border-radius: 8px; padding: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .photo-placeholder { width: 150px; height: 180px; background-color: #dee2e6; border-radius: 8px; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: #6c757d; }
+        footer { background-color: #343a40; color: white; padding: 20px 0; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar (with updated About dropdown) -->
+        <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-lg-none" href="home.html">Phoenix College</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="history.html">History</a></li>
+                            <li><a class="dropdown-item" href="vision-mission.html">Vision and Mission</a></li>
+                            <li><a class="dropdown-item" href="management.html">Management</a></li>
+                            <li><a class="dropdown-item" href="administration.html">Administration</a></li>
+                            <li><a class="dropdown-item" href="infrastructure.html">Infrastructure</a></li>
+                            <li><a class="dropdown-item" href="achievements.html">Achievements</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="academicsDropdown" role="button" data-bs-toggle="dropdown">Academics</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="junior-college.html">Junior College</a></li>
+                            <li><a class="dropdown-item" href="diploma.html">Diploma Programs</a></li>
+                            <li><a class="dropdown-item" href="degree.html">Degree Programs</a></li>
+                            <li><a class="dropdown-item" href="phd.html">PhD</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="admissionsDropdown" role="button" data-bs-toggle="dropdown">Admissions</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="prospectus.html">Prospectus</a></li>
+                            <li><a class="dropdown-item" href="notice-board.html">Notice Board</a></li>
+                            <li><a class="dropdown-item" href="important-links.html">Important Links</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="examDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Examinations</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Junior College</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="exam-science.html">Science</a></li>
+                                    <li><a class="dropdown-item" href="exam-commerce.html">Commerce</a></li>
+                                    <li><a class="dropdown-item" href="exam-arts.html">Arts</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="exam-diploma.html">Diploma Exams</a></li>
+                            <li><a class="dropdown-item" href="exam-degree.html">Degree Exams</a></li>
+                            <li><a class="dropdown-item" href="exam-phd.html">PhD Exams</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="campusDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Campus Life</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="library.html">Library</a></li>
+                            <li><a class="dropdown-item" href="scholarships.html">Scholarships</a></li>
+                            <li><a class="dropdown-item" href="rules-regulations.html">Rules & Regulations</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Co-Curricular</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="nss.html">NSS</a></li>
+                                    <li><a class="dropdown-item" href="ncc.html">NCC</a></li>
+                                    <li><a class="dropdown-item" href="women-development.html">Women Development</a></li>
+                                    <li><a class="dropdown-item" href="self-defense.html">Self Defense</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contact & Help</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                            <li><a class="dropdown-item" href="students-feedback.html">Student Feedback</a></li>
+                            <li><a class="dropdown-item" href="complaint-form.html">Complaint Form</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Administration</h1>
+            <p>Meet the team that manages the day-to-day operations and strategic direction of My College. Our administration is committed to providing quality education and support to all students.</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="admin-card text-center">
+                        <div class="photo-placeholder">Photo</div>
+                        <h4>Dr. Sanjay R. Patil</h4>
+                        <h5>Principal</h5>
+                        <p>Overall head of the institution, responsible for academic and administrative leadership. Ph.D. in Education, 25+ years of experience.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="admin-card text-center">
+                        <div class="photo-placeholder">Photo</div>
+                        <h4>Prof. Meena K. Desai</h4>
+                        <h5>Vice-Principal (Academics)</h5>
+                        <p>Oversees curriculum, examinations, and faculty coordination. M.A., M.Ed., specialist in higher education management.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="admin-card text-center">
+                        <div class="photo-placeholder">Photo</div>
+                        <h4>Mr. Rajesh M. Sharma</h4>
+                        <h5>Vice-Principal (Administration)</h5>
+                        <p>Handles office administration, finance, infrastructure, and staff matters. Experienced in college governance.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="admin-card text-center">
+                        <div class="photo-placeholder">Photo</div>
+                        <h4>Mrs. Shabana A. Khan</h4>
+                        <h5>IQAC Coordinator</h5>
+                        <p>Internal Quality Assurance Cell – responsible for NAAC accreditation, quality initiatives, and feedback systems.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="college-management.html" class="btn btn-primary btn-lg">View College Management Committee →</a>
+            </div>
+
+            <p class="text-center mt-4 text-muted">For direct contact with any administrative member, please visit the Contact page or college office.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 My College. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Active Link & Submenu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var currentPath = window.location.pathname.split('/').pop() || 'home.html';
+            document.querySelectorAll('.navbar-nav a.nav-link, .dropdown-item').forEach(link => {
+                let href = link.getAttribute('href');
+                if (href && href.includes(currentPath) && currentPath !== '') {
+                    link.classList.add('active');
+                    let parentDropdown = link.closest('.dropdown');
+                    if (parentDropdown) {
+                        let toggle = parentDropdown.querySelector('.nav-link.dropdown-toggle');
+                        if (toggle) toggle.classList.add('active');
+                    }
+                }
+            });
+            var dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
+            dropdownSubmenus.forEach(function(submenu) {
+                let a = submenu.querySelector('a.dropdown-toggle');
+                let ul = submenu.querySelector('.dropdown-menu');
+                if (a && ul) {
+                    a.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        ul.classList.toggle('show');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
