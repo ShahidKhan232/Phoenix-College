@@ -20,14 +20,14 @@
         <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand d-lg-none" href="home.html">Phoenix College</a>
+            <a class="navbar-brand d-lg-none" href="index.html">Phoenix College</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="home.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
@@ -144,7 +144,7 @@
     <!-- Active Link & Submenu Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var currentPath = window.location.pathname.split('/').pop() || 'home.html';
+            var currentPath = window.location.pathname.split('/').pop() || 'index.html';
             document.querySelectorAll('.navbar-nav a.nav-link, .dropdown-item').forEach(link => {
                 let href = link.getAttribute('href');
                 if (href && href.includes(currentPath) && currentPath !== '') {
